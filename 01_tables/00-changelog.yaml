@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_autor
+      author: nruizsastoque@gmail.com
+      context: biblioteca
+      labels: HU_01
+      comment: autor table creation
+      changes:
+        - sqlFile:
+            path: 01_tables/01-create-autor.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/01-create-autor-rollback.sql
+
+  - changeSet:
+      id: 02_libro
+      author: nruizsastoque@gmail.com
+      context: biblioteca
+      labels: HU_02
+      comment: libro table creation
+      changes:
+        - sqlFile:
+            path: 01_tables/02-create-libro.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/02-create-libro-rollback.sql
