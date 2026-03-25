@@ -28,3 +28,18 @@ databaseChangeLog:
       rollback:
         - sqlFile:
             path: 11_rollbacks/01_tables/02-create-libro-rollback.sql
+
+  - changeSet:
+      id: 03_usuario
+      author: nruizsastoque@gmail.com
+      context: biblioteca
+      labels: HU_03
+      comment: usuario table creation
+      changes:
+        - sqlFile:
+            path: 01_tables/03-create-usuario.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/03-create-usuario-rollback.sql
