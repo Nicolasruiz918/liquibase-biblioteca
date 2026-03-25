@@ -43,3 +43,18 @@ databaseChangeLog:
       rollback:
         - sqlFile:
             path: 11_rollbacks/01_tables/03-create-usuario-rollback.sql
+
+  - changeSet:
+      id: 04_prestamo
+      author: nruizsastoque@gmail.com
+      context: biblioteca
+      labels: HU_04
+      comment: prestamo table creation
+      changes:
+        - sqlFile:
+            path: 01_tables/04-create-prestamo.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/04-create-prestamo-rollback.sql
