@@ -1,3 +1,5 @@
 databaseChangeLog:
-    - include:
-          file: 01_tables/00-changelog.yaml
+  - include:
+      file: 01_tables/00-changelog.yaml
+  - include:
+      file: 09_inserts/00-changelog.yaml

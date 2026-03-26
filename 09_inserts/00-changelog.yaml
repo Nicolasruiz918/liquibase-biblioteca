@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 05_insert_autor
+      author: nruizsastoque@gmail.com
+      context: biblioteca
+      labels: HU_05
+      comment: insert autor data
+      changes:
+        - sqlFile:
+            path: 09_inserts/01-insert-autor.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/09_inserts/01-insert-autor-rollback.sql
